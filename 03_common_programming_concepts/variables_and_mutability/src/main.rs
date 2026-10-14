@@ -86,22 +86,50 @@
 //     println!("The value of x is {x}");
 // }
 
-fn five() -> i32 {
-    5
-}
+// fn five() -> i32 {
+//     5
+// }
 
-fn five_plus_one(x: u32) -> u32 {
-    x + 1
-}
+// fn five_plus_one(x: u32) -> u32 {
+//     x + 1
+// }
 
+// It gives error in rust
 // fn five_plus_one(x: u32) -> u32 {
 //     x + 1;
 // }
 
 
+// fn main() {
+//     let x = five();
+//     let y: u32 = five_plus_one(5);
+//     println!("The value of five function is {x}");
+//     println!("The value of five_plus_one is {y}");
+// }
+
+
 fn main() {
-    let x = five();
-    let y: u32 = five_plus_one(5);
-    println!("The value of five function is {x}");
-    println!("The value of five_plus_one is {y}");
+    // let number = 50;
+    // if number > 100 {
+    //     println!("The number is greater than 100");
+    // }else {
+    //     println!("The number is less than 100");
+    // }
+
+    // using if in a let statement
+
+    // let condition = true;
+    // let number = if condition {5} else {6};
+    // println!("The value of the number is {number}");
+
+    // returning values from loops
+    let mut counter = 0;
+    let number = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+    println!("The value of the number is {number}");
 }
