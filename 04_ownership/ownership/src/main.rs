@@ -23,30 +23,41 @@ fn main() {
     // but here if we try to print name then error throws
     // println!("name is {name} and result is {result}");
 
-    let s1 = gives_ownership();
+    // let s1 = gives_ownership();
 
-    println!("s1 is {s1}");
+    // println!("s1 is {s1}");
 
-    let s2 = takes_and_gives_back(s1);
+    // let s2 = takes_and_gives_back(s1);
 
-    // s1 ownership is given to takes_and_gives_back function then from inside this fn s string ownership is given to s2 
-    println!("s2 is {s2} and s1 can't be printed here due to not having ownership anymore");
+    // // s1 ownership is given to takes_and_gives_back function then from inside this fn s string ownership is given to s2 
+    // println!("s2 is {s2} and s1 can't be printed here due to not having ownership anymore");
+
+    // let s1 = String::from("Sudheer Das");
+    // let (s1,len) = calculate_length(s1);
+
+    // println!("s1 is {s1} and result is {len}");
 }
 
 // fn takes_ownership(s:String) {
 //     println!("inside takes_ownership {s}");
 // }
 
-fn gives_ownership() -> String{
-    let s= String::from("This is from gives ownership function");
-    s
-}
+// fn gives_ownership() -> String{
+//     let s= String::from("This is from gives ownership function");
+//     s
+// }
 
-fn takes_and_gives_back (s:String) -> String{
-    let s= String::from("This is inside takes and gives back ownership function");
-    s
-}
+// fn takes_and_gives_back (s:String) -> String{
+//     let s= String::from("This is inside takes and gives back ownership function");
+//     s
+// }
 
 // fn add(x: i32) -> i32 {
 //     x+10
+// }
+
+// here ownership and length is both returned and this becomes tedious , so rust has references
+// fn calculate_length(s:String) -> (String,usize){
+//     let result = s.len();
+//     (s,result)
 // }
